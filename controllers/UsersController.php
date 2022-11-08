@@ -72,8 +72,8 @@ class UsersController extends Controller
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
-                Yii::$app->user->login($model);
-                return $this->redirect(['/user']);
+                Yii::$app->users->email($model);
+                return $this->redirect(['/users']);
             }
         } else {
             $model->loadDefaultValues();

@@ -62,12 +62,13 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $problems = Problem::find()->where(['status' => 'Решена'])->orderBy(['timestamp' => SORT_DESC])->limit(4)->all();
+        return $this->render('index');
+        /*$problems = Problem::find()->where(['status' => 'Решена'])->orderBy(['timestamp' => SORT_DESC])->limit(4)->all();
         return $this->render('index',
             [
                 'problems' => $problems,
             ]
-        );
+        );*/
     }
 
     /**
@@ -134,8 +135,8 @@ class SiteController extends Controller
 
     public function actionCounter()
     {
-        $problems = Problem::find()->where(['status' => 'Решена'])->orderBy(['timestamp' => SORT_DESC])->all();
-        return Yii::$app->response->content = count($problems);
+        /*$problems = Problem::find()->where(['status' => 'Решена'])->orderBy(['timestamp' => SORT_DESC])->all();
+        return Yii::$app->response->content = count($problems);*/
     }
 }
 

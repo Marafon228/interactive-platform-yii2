@@ -72,8 +72,8 @@ class UserController extends Controller
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
-                Yii::$app->user->login($model);
-                return $this->redirect(['/user']);
+                Yii::$app->users->login($model);
+                return $this->redirect(['/users']);
             }
         } else {
             $model->loadDefaultValues();
@@ -134,4 +134,3 @@ class UserController extends Controller
         throw new NotFoundHttpException('The requested page does not exist.');
     }
 }
-

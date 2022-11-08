@@ -8,7 +8,7 @@ use yii\widgets\ActiveForm;
 /** @var yii\widgets\ActiveForm $form */
 ?>
 
-<div class="users-form">
+<div class="user-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
@@ -46,21 +46,23 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'company')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'email_verified_at')->textInput() ?>
+    <?/*= $form->field($model, 'email_verified_at')->textInput() */?>
 
     <?= $form->field($model, 'password')->passwordInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'profile_image')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'passwordConfirm')->passwordInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'id_current_idea')->textInput() ?>
+    <?/*= $form->field($model, 'profile_image')->textInput(['maxlength' => true]) */?>
 
-    <?= $form->field($model, 'id_science_idea')->textInput() ?>
+    <?/*= $form->field($model, 'id_current_idea')->textInput() */?>
 
-    <?= $form->field($model, 'remember_token')->textInput(['maxlength' => true]) ?>
+    <?/*= $form->field($model, 'id_science_idea')->textInput() */?>
 
-    <?= $form->field($model, 'created_at')->textInput() ?>
+    <?/*= $form->field($model, 'remember_token')->textInput(['maxlength' => true]) */?>
 
-    <?= $form->field($model, 'updated_at')->textInput() ?>
+    <?/*= $form->field($model, 'created_at')->textInput() */?>
+
+    <?/*= $form->field($model, 'updated_at')->textInput() */?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

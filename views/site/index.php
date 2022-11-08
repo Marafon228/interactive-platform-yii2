@@ -15,7 +15,7 @@ $this->title = 'My Yii Application';
 
         <div class="row">
             <?php
-            if(is_array($problems) || is_object($problems)){
+/*            if(is_array($problems) || is_object($problems)){
                 foreach($problems as $problem){
                     echo '
                     <div class="col-lg-3">
@@ -30,7 +30,7 @@ $this->title = 'My Yii Application';
                     ';
                 }
             }
-            ?>
+            */?>
         </div>
 
     </div>

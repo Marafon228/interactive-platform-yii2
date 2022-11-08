@@ -65,6 +65,11 @@ class Users extends \yii\db\ActiveRecord
         ];
     }
 
+    public static function findByUsername($username)
+    {
+        return self::find()->where(['email' => $username])->one();
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -91,12 +96,12 @@ class Users extends \yii\db\ActiveRecord
             'company' => 'Company',
             'email_verified_at' => 'Email Verified At',
             'password' => 'Password',
-            'profile_image' => 'Profile Image',
+            /*'profile_image' => 'Profile Image',
             'id_current_idea' => 'Id Current Idea',
             'id_science_idea' => 'Id Science Idea',
             'remember_token' => 'Remember Token',
             'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'updated_at' => 'Updated At',*/
         ];
     }
 

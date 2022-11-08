@@ -20,7 +20,7 @@ class Yii {
 
 /**
  * @property yii\rbac\DbManager $authManager 
- * @property \yii\web\Users|__WebUser $users
+ * @property \yii\web\User|__WebUser $users
  * 
  */
 class __Application {
